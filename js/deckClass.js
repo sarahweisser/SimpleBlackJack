@@ -28,6 +28,10 @@ function showDeck(deck) {
   }
   return visibleCards;
 }
+
+function shuffleDeck(deck) {
+
+}
 var testDeck = new Deck();
 testDeck.createDeck();
 var visCards = showDeck(testDeck.deck);
