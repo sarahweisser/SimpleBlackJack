@@ -8,6 +8,9 @@ class Deck {
   constructor() {
     this.deck = [];
   }
+  getFirstCard() {
+    return this.deck[0].cardDisplay();
+  }
   createDeck () {
     var values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
     var suits = ["Spades", "Hearts", "Diamonds", "Clubs"];
@@ -18,6 +21,7 @@ class Deck {
           this.deck.push(card);
         }
       }
+      display.innerHTML = this.getFirstCard();
     }
 }
 
@@ -26,7 +30,7 @@ function showDeck(deck) {
   for (var i = 0; i < deck.length; i++) {
     visibleCards.push(deck[i].cardDisplay());
   }
-  return visibleCards;
+  display.innerHTML =  visibleCards;
 }
 
 function shuffleDeck(deck) {
@@ -34,11 +38,11 @@ function shuffleDeck(deck) {
 }
 var testDeck = new Deck();
 testDeck.createDeck();
-var visCards = showDeck(testDeck.deck);
+//var visCards = showDeck(testDeck.deck);
 
 
 
-var str = visCards;
+//var str = visCards;
 
 
-display.innerHTML = str;
+//display.innerHTML testDeck.deck();
